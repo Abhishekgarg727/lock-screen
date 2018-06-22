@@ -320,21 +320,21 @@ public class EnterPinActivity extends AppCompatActivity {
         } else {
             shake();
 
-//            mTryCount++;
+            mTryCount++;
 
-            mTextAttempts.setText(getString(R.string.pinlock_wrongpin));
-            mPinLockView.resetPinLockView();
+      //      mTextAttempts.setText(getString(R.string.pinlock_wrongpin));
+        //    mPinLockView.resetPinLockView();
 
-//            if (mTryCount == 1) {
-//                mTextAttempts.setText(getString(R.string.pinlock_firsttry));
-//                mPinLockView.resetPinLockView();
-//            } else if (mTryCount == 2) {
-//                mTextAttempts.setText(getString(R.string.pinlock_secondtry));
-//                mPinLockView.resetPinLockView();
-//            } else if (mTryCount > 2) {
-//                setResult(RESULT_TOO_MANY_TRIES);
-//                finish();
-//            }
+            if (mTryCount == 1) {
+                mTextAttempts.setText(getString(R.string.pinlock_firsttry));
+                mPinLockView.resetPinLockView();
+            } else if (mTryCount == 2) {
+              mTextAttempts.setText(getString(R.string.pinlock_secondtry));
+               mPinLockView.resetPinLockView();
+           } else if (mTryCount > 2) {
+                setResult(RESULT_TOO_MANY_TRIES);
+               finish();
+           }
         }
     }
 
